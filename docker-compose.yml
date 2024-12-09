@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/home/app/web
+      - ./api/mediafiles:/home/app/web/mediafiles
+    ports:
+      - 8000:8000
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    volumes:
+      - ./front:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+    depends_on:
+      - api
+volumes:
+  postgres_data:
