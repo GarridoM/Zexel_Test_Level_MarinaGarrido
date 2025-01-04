@@ -44,7 +44,7 @@ class PaymentViewsTest(TestCase):
             content_type='application/json'
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertIn('source_amount', response.json())
+        self.assertIn('source_amount', response.json()['errors'])
 
     def test_get_payment_list(self):
         # Create a few payments first

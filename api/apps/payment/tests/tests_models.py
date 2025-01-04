@@ -4,6 +4,7 @@ from apps.payment.models import Payment
 from decimal import Decimal
 
 class PaymentModelTest(TestCase):
+    # COMENTARIO 3: He procedido a modificar el Status a Requested, ya que no existe Pending en el modelo Payment, es decir, en STATUS_CHOICE.
     def setUp(self):
         self.valid_payment_data = {
             'source_amount': Decimal('100.00'),
@@ -12,7 +13,7 @@ class PaymentModelTest(TestCase):
             'target_amount': Decimal('85.00'),
             'target_currency': 'EUR',
             'target_country': 'DE',
-            'status': 'pending',
+            'status': 'Requested',
             'concept': 'Test payment',
             'rate_exchange': Decimal('0.85'),
             'sender_full_name': 'John Doe',
