@@ -20,6 +20,7 @@ python-dotenv==0.21.0
 pytz==2024.1
 PyYAML==6.0.2
 referencing==0.35.1
+requests==2.32.3
 rpds-py==0.20.0
 setuptools==72.1.0
 sqlparse==0.5.1
