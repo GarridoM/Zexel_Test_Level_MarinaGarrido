@@ -14,18 +14,18 @@ class Payment(models.Model):
 
     id = models.UUIDField(primary_key=True, unique=True, default=uuid.uuid4)
     source_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
-    source_currency = models.CharField(max_length=20)
-    source_country = models.CharField(max_length=20)
+    source_currency = models.CharField(max_length=3) # Comentario 4: Los ISO de códigos de moneda no superan los 3 caracteres.
+    source_country = models.CharField(max_length=3)  # Comentario 5: Los ISO de códigos de paises no superarn los 3 caracteres.
     target_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
-    target_currency = models.CharField(max_length=20)
-    target_country = models.CharField(max_length=20)
+    target_currency = models.CharField(max_length=3) # Comentario 6: Idem al comentario 4
+    target_country = models.CharField(max_length=3) # Comentario 7: Idem al comentario 5
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Draft')
-    concept = models.CharField(max_length=255, null=True, blank=True)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='Draft') # Comentario 8: Basándonos en los valores que hay en STATUS_CHOICE hemos reducido la longitud.
+    concept = models.CharField(max_length=100, null=True, blank=True) # Comentario 9: El concepto (si nos basamos en entidades bancarias) no debe ser muy largo. Por ello, lo he reducido a 100, aunque lo reduciria aun más.
     rate_exchange = models.DecimalField(max_digits=10, decimal_places=6, default=0)
-    sender_full_name = models.CharField(max_length=255, default='')
-    receiver_full_name = models.CharField(max_length=255, default='')
+    sender_full_name = models.CharField(max_length=100, default='') # Comentario 10: Pensando en nombres y apellidos completos, 255 es excesivo.
+    receiver_full_name = models.CharField(max_length=100, default='') # Comentario 11: Idem al comentario 10.
 
     def __str__(self):
         return f"{self.source_amount} {self.source_currency} to {self.target_amount} {self.target_currency}"
