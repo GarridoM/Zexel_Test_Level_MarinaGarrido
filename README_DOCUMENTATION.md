@@ -1,7 +1,7 @@
 # 🌟 Proyecto de Prueba Técnica para Zexel - Gestión de Pagos 💸
-Esta documentación indica como llevaría acabo la prueba técnica. Como os comenté en la entrevista, tendría que repasar concienzudamente las técnologias que me indicais, ya que hace años que no las uso. 
+Esta documentación indica como llevaría acabo la prueba técnica. Como os comenté en la entrevista, tendría que repasar concienzudamente las tecnologias que me indicais, ya que hace años que no las uso. 
 
-Usaré los puntos que indicais en el plan de acción para ir redactando lo que sería mi solución.
+Usaré los puntos que indicáis en el plan de acción para ir redactando lo que sería mi solución.
 
 ### 📝 Plan de Acción
 
@@ -15,7 +15,7 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
     *Realizado*:
    - Se ha creado un nuevo repositorio que tendréis en el correo.
    - Se ha creado la rama Main. Esta rama tendrá el código original.
-   - Se ha creado la rama Dev. Esta rama se ha creado posteriormente por error, ya que creía que esta rama la habia creado inicialmente.
+   - Se ha creado la rama Dev. Esta rama se ha creado posteriormente por error, ya que creía que esta rama la había creado inicialmente.
    - Se han creado ramas feature/** por cada nueva tarea que se ha realizado.
 
 2. 🔍 Evaluación y Planificación:
@@ -26,7 +26,7 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
    - Prioriza las tareas pendientes basándote en su impacto y complejidad.
 
     *Realizado*:
-   - He mirado el codigo por encima, veo un código con necesidad de algunas mejoras. De ahi, supongo que las tareas que se indican.
+   - He mirado el código por encima, veo un código con necesidad de algunas mejoras. De ahí, supongo que las tareas que se indican.
    - Sobre las tareas propuestas las realizaria en el siguiente orden:
         - Tarea: BACKEND. Infraestructura.
             - Configura PostgreSQL con Docker.
@@ -48,22 +48,22 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
             - Asegúrate de que el país origen y destino sean diferentes
           
           *Explicación*
-          - Esta tarea la he realizado en segundo lugar, porque considero que tener un modelo estable en validaciones es importante para poder desarrollar la aplición, ya que nos impide introducir datos no validos en nuestra BBDD.
-          - Gracias a realizar esta tarea hemos ejecutado los test que hay hasta la fecha en el proyecto, para verificar que todo funciona correctamente con nuestras modificaciones. En ese momento, nos hemos dado cuenta de que habia errores en los test. Por tanto, nuestra tercera tarea ha sido aquella relacionada con los test.
+          - Esta tarea la he realizado en segundo lugar, porque considero que tener un modelo estable en validaciones es importante para poder desarrollar la aplicación, ya que nos impide introducir datos no validos en nuestra BBDD.
+          - Gracias a realizar esta tarea hemos ejecutado los test que hay hasta la fecha en el proyecto, para verificar que todo funciona correctamente con nuestras modificaciones. En ese momento, nos hemos dado cuenta de que había errores en los test. Por tanto, nuestra tercera tarea ha sido aquella relacionada con los test.
         
         - Tarea: BACKEND. Testing
             - Repara bug tests de cantidad negativa
           
           *Explicación*
           - Los test deben realizarse en la medida de lo posible durante el desarrollo de la aplicacion de ese modo sabemos que todo lo que modifiquemos no esta afectando a otras partes.
-          - De hecho no solo estaban erroneos los test de cantidad negativa, también habia otros test relacionados con el status que he procedido a arreglar.
+          - De hecho no solo estaban erroneos los test de cantidad negativa, también había otros test relacionados con el status que he procedido a arreglar.
           - IMPORTANTE: Creo que sería conveniente utilizar github actions o jenkins para realizar un despliegue automatico siempre y cuando se pasen las pruebas para las ramas dev y main. Es algo que me hubiera gustado implementar y que creo que aporta un valor no tangible para el cliente pero si una estabilidad en el desarrollo del proyecto.
 
         - Tarea: BACKEND. Optimiza Modelos:
             - Revisa y ajusta los tipos de datos en los modelos para mayor eficiencia
           
           *Explicación*
-          - En mi opinión, no es una tarea sumamente relevante, pero si importante para la BBDD. Dicho de otro modo, a nivel de aplicación no iba a impactar o ser más optima pero no es lo mismo tener una BBDD cuyo tamaño por una tabla sea de 1MG que de 1Kb. Por ello, realizar una optimización de las longitudes y/o tipos nos permite ser más optimos y que nuestra BBDD no "pese" demasiado.
+          - En mi opinión, no es una tarea sumamente relevante, pero sí importante para la BBDD. Dicho de otro modo, a nivel de aplicación no iba a impactar o ser más óptima pero no es lo mismo tener una BBDD cuyo tamaño por una tabla sea de 1MG que de 1Kb. Por ello, realizar una optimización de las longitudes y/o tipos nos permite ser más óptimos y que nuestra BBDD no "pese" demasiado.
         
         - Tarea: FRONTEND. Completa funcionalidades CRUD:
             - Implementa la funcionalidad de edición de pagos existentes
@@ -76,16 +76,16 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
           - Asegúrate de que se envíen los códigos ISO correctos al backend
 
           *Explicación*
-          - Utilizaria la api de Countries Now (exactamente la misma que he utilizado en el backend) De ese modo, con una sola llamada, obtendria todos los datos necesarios para los codigos de los campos de pais y moneda, pudiéndolos convertir en desplegables en los que mostraria el pais y el código, aunque al backend solo se envie los códigos. Al mostrar en el desplegable el pais y el código es más facil e intuitiva para los usuarios.
-          - Tambien añadiria limitaciones de longitud en el frontend en los campos del tipo charfield, como por ejemplo: nombre del emisor y nombre del receptor, siguiendo la longitud establecidad en el backend.
-          - Tambien estableceria los campos númericos como tal, impidiendo que se puedan guardar o escribir nombres como actualmente pasa.
+          - Utilizaría la api de Countries Now (exactamente la misma que he utilizado en el backend) De ese modo, con una sola llamada, obtendría todos los datos necesarios para los codigos de los campos de país y moneda, pudiéndolos convertir en desplegables en los que mostraria el país y el código, aunque al backend solo se envíe los códigos. Al mostrar en el desplegable el país y el código es más facil e intuitiva para los usuarios.
+          - Tambien añadiría limitaciones de longitud en el frontend en los campos del tipo charfield, como por ejemplo: nombre del emisor y nombre del receptor, siguiendo la longitud establecida en el backend.
+          - Tambien establecería los campos numéricos como tal, impidiendo que se puedan guardar o escribir nombres como actualmente pasa.
         
         - Tarea: FRONTEND. Testing
           - Implementa tests unitarios y de integración con Cypress
 
           *Explicación*
 
-          - Como he explicado anteriormente en la parte backend. Los test unitarios debemos realizarlos desde el principio, de ese modo, cualquier modificación que afecte a cualquier otra parte del sistema sería detectada rapidamente.
+          - Como he explicado anteriormente en la parte backend. Los test unitarios debemos realizarlos desde el principio, de ese modo, cualquier modificación que afecte a cualquier otra parte del sistema sería detectada rápidamente.
         
         - Tareas: FRONTEND. 
           - Implementa Navbar:
@@ -102,7 +102,9 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
             - Añade un selector de idioma en el navbar o en una ubicación prominente
 
           *Explicación*
-          - He juntado todas estas tareas porque considero que todas son mejoras visuales. Dicho de otro modo o al menos desde mi punto de vista, es el eterno debate entre funcionalidad y UX. Un producto puede tener muy buena funcionalidad pero si no es atractivo para el usuario, no tendrá exito y ocurre exactamente lo mismo al contrario, si un producto es muy atractivo pero no cumple con la funcionalidad que el usuario espera lo desechará. En ambos casos, es muy díficil volver a captar o que ese usuario le de una nueva oportunidad. Por ello, UX y funcionalidad deben ir de la mano. Dicho esto, si tuviera que establecer un orden para la realización de las tareas por impacto y aportación seria:
+          - He juntado todas estas tareas porque considero que son mejoras visuales. Dicho de otro modo, o al menos desde mi punto de vista, es el eterno debate entre funcionalidad y UX. Un producto puede tener muy buena funcionalidad, pero si no es atractivo para el usuario, no tendrá éxito. Ocurre lo mismo al contrario, si un producto es muy atractivo, pero no cumple con la funcionalidad que el usuario espera, lo desechará. En ambos casos, es muy difícil volver a captar o que ese usuario le dé una nueva oportunidad. Por ello, UX y funcionalidad deben ir de la mano. 
+          
+            Dicho esto, si tuviera que establecer un orden para la realización de las tareas por impacto y aportación seria:
             - Mejora la Tabla de Pagos
             - Implementa Navbar.
             - Implementa selección de idioma.
@@ -113,7 +115,7 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
           - Crea un servicio para manejar las conversiones de moneda en tiempo real
 
           *Explicación*
-          - Confieso que esta tarea me genera dudas dejarla para el final. Creo que aporta un valor funcional muy importante, ya que, estamos entendiendo que los pagos no siempre se van a realizar dentro del mismo país. Seguramente, paralelizaría de algún modo la realización de la parte frontend con esta parte, ya que tambien es necesaria para poder guardar pagos reales entre diferentes paises.
+          - Confieso que esta tarea me genera dudas dejarla para el final. Creo que aporta un valor funcional muy importante, ya que estamos entendiendo que los pagos no siempre se van a realizar dentro del mismo país. Seguramente paralelizaría de algún modo la realización de la parte frontend con esta parte, ya que también es necesaria para poder guardar pagos reales entre diferentes países.
 
 
 3. 🛠️ Implementación de Mejoras:
@@ -125,7 +127,7 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
 
     *Realizado*:
     - En el punto anterior he explicado algunas mejoras que realizaría. 
-    - A nivel de infraestructura, crearia esta parte como un servicio independiente. De forma, que si en el futuroo debemos replicar esta funcionalidad se pueda. Dicho de otro modo, en lugar de dockerizar realizar funciones serverless que me permitan tener mas control sobre el balance de carga y peticiones en un momento dado.
+    - A nivel de infraestructura, crearía esta parte como un servicio independiente. De esta forma, si en el futuro debemos replicar esta funcionalidad, se podría. Dicho de otro modo, en lugar de dockerizar, realizaría funciones serverless que me permitirían tener más control sobre el balance de carga y peticiones en un momento dado.
 
 4. 🔒 Mantenimiento de la Funcionalidad Core:
 
@@ -143,11 +145,11 @@ Usaré los puntos que indicais en el plan de acción para ir redactando lo que s
    - Desarrolla y ejecuta pruebas exhaustivas para garantizar la calidad y robustez del código.
 
     *Realizado*:
-   - A lo largo del proyecto, vereis comentarios sobre cada modificación.
-   - Faltan más pruebas en el backend que es la parte que más he tocado. Soy consciente de ello pero no me ha sido posible por falta de tiempo.
+   - A lo largo del proyecto, veréis comentarios sobre cada modificación.
+   - Faltan más pruebas en el backend que es la parte que más he tocado. Soy consciente de ello, pero no me ha sido posible por falta de tiempo.
 
 
 ## NOTA
 
-Espero que con el desarrollo realizado y la explicación de este documento, podáis conocerme mejor en mi faceta profesional y como abordo los diferentes desafios que se pueden dar en el día a día. Quedo a vuestra disposición para cualquier consulta o aclaración necesaria.
+Espero que con el desarrollo realizado y la explicación de este documento podáis conocerme mejor en mi faceta profesional, así como verme abordar los diferentes desafíos que se pueden dar en el día a día. Quedo a vuestra disposición para cualquier consulta o aclaración necesarias.
 
